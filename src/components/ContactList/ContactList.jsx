@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts.map(({id, name, number}) => (
         <li key={id}>
           <p>
-            {name} : {number}
+            {name}:{number}
           </p>
-          <button type="button">Delete</button>
+          <button type="button" onClick={()=>onDeleteContact(id)}>Delete</button>
         </li>
       ))}
     </ul>
