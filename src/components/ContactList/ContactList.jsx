@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
+
 
 const ContactList = ({ contacts }) => {
-  return contacts.map(({ id, name, number }) => (
+  return (
     <ul>
-      <li key={(id = nanoid())}>
-        <p>
-          {name} : {number}
-        </p>
-        <button type="button">Delete</button>
-      </li>
+      {contacts.map(({id, name, number}) => (
+        <li key={id}>
+          <p>
+            {name} : {number}
+          </p>
+          <button type="button">Delete</button>
+        </li>
+      ))}
     </ul>
-  ));
+  );
 };
 
 ContactList.propTypes = {
@@ -20,7 +22,7 @@ ContactList.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
-    }).isRequired
-  ).isRequired,
+    })
+  ),
 };
 export default ContactList;
