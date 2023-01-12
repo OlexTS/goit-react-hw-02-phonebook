@@ -15,7 +15,7 @@ class App extends Component {
     filter: '',
   };
 
-  addContact = ({ id, name, number }) => {
+  addContact = ({ name, number }) => {
     const contact = { id: nanoid(), name, number };
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts],
@@ -33,7 +33,7 @@ class App extends Component {
 }
 
   render() {
-    const { contacts, filter } = this.state;
+    const { filter } = this.state;
     const visibleContacts = this.getVisibleContacts()
     return (
       <div>
