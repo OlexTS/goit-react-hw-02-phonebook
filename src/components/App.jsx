@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import ContactForm from './ContactForm';
+import ContactList from './ContactList'
 
 class App extends Component {
   state = {
@@ -17,14 +18,15 @@ class App extends Component {
 }
   
   render() {
+    const { contacts, filter } = this.state;
     return (
       <div>
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.onSubmitHandler} />
 
         <h2>Contacts</h2>
-        {/* <Filter />
-  <ContactList /> */}
+         {/* <Filter /> */}
+  <ContactList contacts={contacts} /> 
       </div>
     );
   }
