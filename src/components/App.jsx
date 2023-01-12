@@ -14,11 +14,12 @@ class App extends Component {
   };
 
   onSubmitHandler = (event) => {
-  console.log(event);
+    // const { contacts, filter } = this.state;
+    this.setState(prevState => prevState)
 }
   
   render() {
-    const { contacts, filter } = this.state;
+    const { contacts} = this.state;
     return (
       <div>
         <h1>Phonebook</h1>
