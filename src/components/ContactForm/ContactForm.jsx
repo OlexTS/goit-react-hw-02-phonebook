@@ -7,8 +7,8 @@ import { Input, FormCont, Label, SubmitButton, Text } from './ContactForm.styled
 
 
 const schema = yup.object().shape({
-  name: yup.string.isRequired().max(5, 'Must be exactly 5 digits'),
-  number: yup.string.max(4).isRequired()
+  // name: yup.string.isRequired().max(5, 'Must be exactly 5 digits'),
+  // number: yup.string.max(4).isRequired()
 });
 const initialValues = {
   name: '',
