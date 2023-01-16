@@ -19,7 +19,7 @@ export const Text = styled.span`
 
 export const Input = styled(Field)`
   display: inline-block;
-  margin: 0;
+  margin: auto;
   margin-bottom: 5px;
   width: 300px;
   padding: 15px;
@@ -46,3 +46,8 @@ export const SubmitButton = styled.button`
     color: white;
   }
 `;
+
+export const ErrorText = styled.p`
+  color: red;
+  font-size: 14px;
+`
